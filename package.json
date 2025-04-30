@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/GNWekesa/AlileeTransformed#readme",
   "dependencies": {
-    "bootstrap": "^5.3.5"
+    "bootstrap": "^5.3.5",
+    "express": "^5.1.0"
   }
 }
