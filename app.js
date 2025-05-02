@@ -50,7 +50,7 @@ app.post('/contact', async (req, res) => {
       secure: false, // false for STARTTLS
       auth: {
         user: 'nekesa254@gmail.com', // your Gmail address
-        pass: 'lacl txzw lrun spyb', // your Gmail app password (not regular password)
+        pass: '', // your Gmail app password (not regular password)
       },
     });
 
