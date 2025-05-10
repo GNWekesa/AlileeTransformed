@@ -1,3 +1,4 @@
+// THIS IS MY SERVER
 // Import the Express framework. Express.js is a lightweight, 
 // flexible web application framework for Node.js. It simplifies 
 // the process of building web servers and APIs using JavaScript.
@@ -78,3 +79,21 @@ app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
 
+
+// Code below dded when i added the new html pages as defined
+// Shop Page Routes
+// Serve static files from the 'views' folder (add this line)
+app.use(express.static(path.join(__dirname, 'views')));
+
+// Shop routes
+app.get('/shop', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/shop.html'));
+});
+
+app.get('/categories', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/categories.html'));
+});
+
+app.get('/new-arrivals', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/new-arrivals.html'));
+});

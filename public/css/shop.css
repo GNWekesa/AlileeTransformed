@@ -1,0 +1,17 @@
+.category-card {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
