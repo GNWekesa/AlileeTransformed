@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Return & Refund Policy | Alilee Fashion</title>
+  <link rel="stylesheet" href="/css/basic.css">
+  <style>
+    body {
+      background-color: #f9f5e3;
+      font-family: 'Playfair Display', serif;
+      color: #001C6C;
+      padding: 2rem;
+    }
+    h1 {
+      color: #001C6C;
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 700px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Return & Refund Policy</h1>
+  <p>We hope you love your purchase. If you're not satisfied, you may return unused items within 14 days 
+    of delivery. Refunds will be processed once items are inspected. Contact our support for assistance.</p>
+<!-- the shop now button redirects to whatsapp-->
+  <a href="https://wa.me/254785687846" target="_blank" class="btn btn-success" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp me-2"></i> Contact
+  </a>
+<script>
+    // this goes to all html pages to load navbar dynamically
+    fetch('/partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Re-initialize Bootstrap components if needed
+        new bootstrap.Collapse(document.getElementById('navbarNav'));
+      });
+
+      // this goes to all html pages to load footer dynamically
+      fetch('/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+   </script>
+</body>
+</html>

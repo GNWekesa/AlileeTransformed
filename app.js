@@ -17,26 +17,48 @@ const app = express();
 // submissions and sends an email using Nodemailer.
 const PORT = process.env.PORT || 3000;
 
+// ======================
+// Middleware Configuration
+// ======================
 // Middleware: Serve static files (CSS, JS, Images) from the "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
 //added on day 2, to Serve static files from 'node_modules'
+// Serve static files from root directory
+app.use(express.static(path.join(__dirname)));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
+// Serve static files from the 'views' folder (add this line)
+app.use(express.static(path.join(__dirname, 'views')));
+// Serve static files from the 'partials' directory
+app.use('/partials', express.static(path.join(__dirname, 'partials')));
 // Middleware: Serve Bootstrap static files from node_modules
 // Allows me to use Bootstrap via "/bootstrap" URL path
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
-// block below for creating a POST route that listens for form 
-// submissions and sends an email using Nodemailer.
-// Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
 
-// Route: Handle GET request for the homepage "/"
-// Sends the 'index.html' file as the response
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
 
+// ======================
+// Route Handling
+// ======================
+// Main pages
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/shop', (req, res) => res.sendFile(path.join(__dirname, 'views/shop.html')));
+app.get('/collections', (req, res) => res.sendFile(path.join(__dirname, 'views/collections.html')));
+app.get('/new-arrivals', (req, res) => res.sendFile(path.join(__dirname, 'views/new-arrivals.html')));
+app.get('/contactp', (req, res) => res.sendFile(path.join(__dirname, 'views/contactp.html')));
+app.get('/cart-checkout', (req, res) => res.sendFile(path.join(__dirname, 'views/cart-checkout.html')));
+// Policy Pages Routes
+app.get('/return-refundpolicy', (req, res) => {res.sendFile(path.join(__dirname, 'views/return-refundpolicy.html'));});
+app.get('/shipping-policy', (req, res) => {res.sendFile(path.join(__dirname, 'views/shipping-policy.html'));});
+app.get('/privacy-policy', (req, res) => {res.sendFile(path.join(__dirname, 'views/privacy-policy.html'));});
+app.get('/termsnconditions', (req, res) => {res.sendFile(path.join(__dirname, 'views/termsnconditions.html'));});
+
+// Redirect index.html to root
+app.get('/index.html', (req, res) => res.redirect('/'));
+
+
+
+// ======================
+// Contact Form Handling
+// ======================
 // block below for creating a POST route that listens for form 
 // submissions and sends an email using Nodemailer.
 // POST route to handle contact form
@@ -69,6 +91,9 @@ app.post('/contact', async (req, res) => {
     res.status(500).json({ message: 'Failed to send email.' });
   }
 });
+// ======================
+// End of Contact Form Handling
+// ======================
 
 // Start the server and listen on port 3000 or environment port
 // Start the server and listen on port 3000
@@ -80,20 +105,11 @@ app.listen(PORT, () => {
 });
 
 
-// Code below dded when i added the new html pages as defined
-// Shop Page Routes
-// Serve static files from the 'views' folder (add this line)
-app.use(express.static(path.join(__dirname, 'views')));
 
-// Shop routes
-app.get('/shop', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/shop.html'));
-});
+// block below for creating a POST route that listens for form 
+// submissions and sends an email using Nodemailer.
+// Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/categories', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/categories.html'));
-});
-
-app.get('/new-arrivals', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/new-arrivals.html'));
-});

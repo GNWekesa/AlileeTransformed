@@ -61,3 +61,58 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// After navbar loads, initialize smooth scroll
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle all navigation links
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      // Handle internal page anchors
+      if (href.startsWith('/#')) {
+        e.preventDefault();
+        const sectionId = href.split('#')[1];
+        window.location.href = `/#${sectionId}`;
+      }
+      
+      // Handle same-page anchors
+      else if (href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Handle page load with anchor
+  if(window.location.hash) {
+    document.querySelector(window.location.hash).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+
+
+
+// Show the scroll-up button when scrolled down
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollUpButton = document.getElementById("scroll-up");
+  
+  // Show/hide scroll button
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      scrollUpButton.classList.add('show');
+    } else {
+      scrollUpButton.classList.remove('show');
+    }
+  });
+
+  // Scroll to top
+  scrollUpButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});

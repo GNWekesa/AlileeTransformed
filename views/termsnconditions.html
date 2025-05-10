@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terms & Conditions | Alilee Fashion</title>
+  <link rel="stylesheet" href="/css/basic.css">
+  <style>
+    body {
+      background-color: #f9f5e3;
+      font-family: 'Playfair Display', serif;
+      color: #001C6C;
+      padding: 2rem;
+    }
+    h1 {
+      color: #001C6C;
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 700px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Terms & Conditions</h1>
+  <p>By using this website, you agree to comply with our policies. Alilee Fashion reserves the right to update these terms at any time. Use of this site constitutes acceptance of all posted policies.</p>
+<script>
+    // this goes to all html pages to load navbar dynamically
+    fetch('/partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Re-initialize Bootstrap components if needed
+        new bootstrap.Collapse(document.getElementById('navbarNav'));
+      });
+
+      // this goes to all html pages to load footer dynamically
+      fetch('/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+   </script>
+</body>
+</html>

@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/basic.css">
 </head>
 <body>
-  <!-- Navigation -->
-
+  <!-- this is a placeholder, navbar code should be here but i have placed it in a partials folder, i shall use JS to load it. -->
+  <div id="navbar-placeholder"></div>
   <main class="container py-5">
     <h1 class="text-center mb-5">New Arrivals</h1>
     
@@ -26,11 +26,11 @@
       <div class="col-md-4">
         <div class="card product-card shadow-sm">
           <span class="badge bg-danger position-absolute top-0 end-0 m-2">New</span>
-          <img src="/images/new-product-1.jpg" class="card-img-top" alt="New Turban">
+          <img src="/images/staytunedAIgen.jpeg" class="card-img-top" alt="New Turban">
           <div class="card-body">
             <h5 class="card-title">Designer Edition</h5>
-            <p class="card-text">Ksh. 650</p>
-            <a href="#" class="btn btn-primary">View Details</a>
+            <p class="card-text">COMING SOON</p>
+            <a href="#" class="btn btn-primary">Details Soon</a>
           </div>
         </div>
       </div>
@@ -97,6 +97,37 @@
           </div>
         </div>
       </footer>
-      
+            <!-- scroll to top icon-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+      </a>
+
+            <!-- floating whatsapp icon-->
+      <a href="https://wa.me/254785687846" class="whatsapp-float" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+      </a>
+          <script>
+    // this goes to all html pages to load navbar dynamically
+    fetch('/partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Re-initialize Bootstrap components if needed
+        new bootstrap.Collapse(document.getElementById('navbarNav'));
+      });
+
+
+            // this goes to all html pages to load footer dynamically
+      fetch('/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+   </script>
+
+      <!-- scroll-up button HTML  -->
+<a href="#" id="scroll-up" class="scrollup" aria-label="Scroll to top">
+  <i class="bi bi-arrow-up scrollup__icon"></i>
+</a>
 </body>
 </html>

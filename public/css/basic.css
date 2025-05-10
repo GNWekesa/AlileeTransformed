@@ -1,5 +1,105 @@
+/* Ensure navbar stays on top */
+.navbar {
+  z-index: 1000; /* Higher than hero overlay's z-index (0) */
+  position: relative; /* Required for z-index to work */
+}
+
 /* enable smooth scrolling via CSS:*/
 html {
     scroll-behavior: smooth;
   }
+
+/* Scrolled state */
+.navbar-scrolled {
+  background: rgba(0, 28, 108, 0.9) !important;
+}
   
+
+/* Active link styling */
+.nav-link.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Color for my navigation bar text*/
+  .navbar-dark .nav-link,
+.navbar-dark .navbar-brand {
+  color: #001C6C !important;
+}
+
+
+/* style for the floating whatsapp icon */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  left: 20px; /* Changed from right: 20px to left: 20px */
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* force entire page to be this bg color*/
+/* Force full page background */
+body, html {
+  background-color: #f9f5e3 !important;
+  font-family: Garamond, serif; /* am forcing my whole page to have this font*/
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  z-index: 1000;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Update your CSS for scroll-up button */
+.scrollup {
+  position: fixed;
+  bottom: 80px; /* Position above WhatsApp button */
+  right: 20px;
+  z-index: 1000;
+  display: none;
+  background-color: #001C6C; /* Match your brand color */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scrollup.show {
+  display: flex;
+}
+
+.scrollup__icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.scrollup:hover .scrollup__icon {
+  transform: translateY(-3px);
+  color: #f9f5e3;
+}
+
+

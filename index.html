@@ -12,39 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/basic.css">
 </head>
 <body>
 
-      <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: transparent;">
-        <div class="container">
-          <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="#">
-            <img src="/images/AlileeOfficialLogoTagline.png" alt="Logo" style="height: 30px; margin-right: 10px;" />
-            Alilee Fashion
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link text-white active" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-              <!-- initial line since it was one page website-->
-              <!--<li class="nav-item"><a class="nav-link text-white" href="#shop">Shop</a></li>-->
-              <!-- below is the new working link to another page-->
-              <li class="nav-item"><a class="nav-link text-white" href="/shop.html">Shop</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="/categories.html">Categories</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="/new-arrivals.html">New Arrivals</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#reviews">Reviews</a></li>
-              <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-            </ul>            
-          </div>
-        </div>
-      </nav>
-      <!-- End of Navigation Bar -->
-
+  <!-- this is a placeholder, navbar code should be here but i have placed it in a partials folder, i shall use JS to load it. -->
+  <div id="navbar-placeholder"></div>
       <!-- Hero Section Start -->
   <section id="home" class="vh-100 d-flex align-items-center position-relative" style="background: url('/images/bluebest.png') no-repeat center center/cover;">
   <!-- Bluish Overlay -->
@@ -93,7 +67,11 @@
                 <div class="card-body">
                   <h5 class="card-title">Black Turban</h5>
                   <p class="card-text text-muted">Ksh. 500</p>
-                  <a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>
+                  <!--<a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>-->
+                  <!-- the shop now button redirects to whatsapp-->
+                  <a href="https://wa.me/254785687846" target="_blank" class="btn btn-success" aria-label="Chat on WhatsApp">
+                  <i class="bi bi-whatsapp me-2"></i> Shop Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -104,7 +82,11 @@
                 <div class="card-body">
                   <h5 class="card-title">Blue Turban</h5>
                   <p class="card-text text-muted">Ksh. 400</p>
-                  <a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>
+                  <!--<a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>-->
+                  <!-- the shop now button redirects to whatsapp-->
+                  <a href="https://wa.me/254785687846" target="_blank" class="btn btn-success" aria-label="Chat on WhatsApp">
+                  <i class="bi bi-whatsapp me-2"></i> Shop Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -115,7 +97,11 @@
                 <div class="card-body">
                   <h5 class="card-title">Maroon Turban</h5>
                   <p class="card-text text-muted">Ksh. 400</p>
-                  <a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>
+                  <!--<a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>-->
+                  <!-- the shop now button redirects to whatsapp-->
+                  <a href="https://wa.me/254785687846" target="_blank" class="btn btn-success" aria-label="Chat on WhatsApp">
+                  <i class="bi bi-whatsapp me-2"></i> Shop Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -126,7 +112,11 @@
                 <div class="card-body">
                   <h5 class="card-title">Pink Turban</h5>
                   <p class="card-text text-muted">Ksh. 400</p>
-                  <a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>
+                  <!--<a href="#" class="btn btn-outline-dark rounded-pill w-100">Shop Now</a>-->
+                  <!-- the shop now button redirects to whatsapp-->
+                  <a href="https://wa.me/254785687846" target="_blank" class="btn btn-success" aria-label="Chat on WhatsApp">
+                  <i class="bi bi-whatsapp me-2"></i> Shop Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -143,7 +133,7 @@
             <div class="col-md-4 mb-4">
               <div class="card h-100 shadow-sm">
                 <div class="card-body">
-                  <p class="card-text">"Wee Clean transformed my home! Professional, thorough, and friendly staff."</p>
+                  <p class="card-text">"I love the turban, it suits my daily needs."</p>
                   <div class="text-warning mb-2">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                   </div>
@@ -156,11 +146,11 @@
             <div class="col-md-4 mb-4">
               <div class="card h-100 shadow-sm">
                 <div class="card-body">
-                  <p class="card-text">"Reliable service every time. I’ve been a customer for over 5 years!"</p>
+                  <p class="card-text">"Reliable service every time. I am able to wear/remove it on the go!"</p>
                   <div class="text-warning mb-2">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                   </div>
-                  <h6 class="card-subtitle text-muted">— David M.</h6>
+                  <h6 class="card-subtitle text-muted">— Doreen M.</h6>
                 </div>
               </div>
             </div>
@@ -181,105 +171,47 @@
         </div>
       </section>
       
-      <!-- contact form section-->
-      <section id="contact" class="contact-section" style="background-color: #f9f9f9; padding: 60px 0;">
-        <div class="container">
-          <h2 class="text-center mb-4">Get in Touch</h2>
-          <p class="text-center mb-5">Have questions or want to request a quote? Fill out the form below and we'll get back to you!</p>
-
-          <form id="contactForm" class="contact-form" style="max-width: 600px; margin: 0 auto;">
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="subject" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject">
-            </div>
-
-            <div class="mb-4">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
-            </div>
-
-            <!-- Feedback message -->
-            <div id="formMessage" class="mt-3 text-center"></div>
-          </form>
-        </div>
-      </section>
-      <!-- end of contact form section-->
+      <!-- load the footer-->
+    <div id="footer-placeholder"></div>
 
 
-      <footer class="text-white py-4" style="background-color: #001C6C;">
-        <div class="container text-md-left">
-          <div class="row">
-      
-            <!-- About Section -->
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-              <h5 class="fw-bold mb-3"> Alilee Transformed <i class="fas fa-vacuum"></i></h5>
-              <p>
-                Alilee Transformed provide high-quality, stylish head turbans that are easy to put on and style. 
-                Our turbans offer a quick and convenient alternative to traditional scarves, allowing women to 
-                effortlessly achieve the desired look. The designs also allow for additional customization with 
-                other fabrics, catering to a wide range of personal styles and preferences.
-              </p>
-            </div>
-      
-            <!-- Working Hours -->
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-              <h5 class="fw-bold mb-3">Working Hours</h5>
-              <p><i class="fas fa-briefcase me-2"></i> Mon – Fri: 08:00 – 17:00</p>
-              <p><i class="fas fa-times-circle me-2"></i> Saturday: Closed</p><!--that i class is for icons-->
-              <p><i class="fas fa-times-circle me-2"></i> Sunday: Closed</p>
-            </div>
-      
-            <!-- Contact Info -->
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-              <h5 class="fw-bold mb-3">Visit Us</h5>
-              <p><i class="fas fa-map-marker-alt me-2"></i> Edvik Place, Nyakinyua Road, Nairobi, Kenya</p>
-              <p><i class="fas fa-phone me-2"></i> (+254) 785687846</p>
-              <p><i class="fas fa-envelope me-2"></i> alileetransformedltd@gmail.com</p>
-      <!--target="_blank" ensures the links open in a new tab.-->
-              <div class="mt-3">
-                <a href="https://www.facebook.com/alileetransformed" target="_blank" class="text-white me-3">
-                  <i class="fab fa-facebook fa-lg"></i>
-                </a>
-                <a href="https://www.instagram.com/itis_gabi/" target="_blank" class="text-white me-3">
-                  <i class="fab fa-instagram fa-lg"></i>
-                </a>
-                <a href="https://x.com/Gabriella_NW" target="_blank" class="text-white me-3">
-                  <i class="fab fa-twitter fa-lg"></i>
-                </a>
-                <a href="https://wa.me/254785687846" target="_blank" class="text-white me-3">
-                  <i class="fab fa-whatsapp fa-lg"></i><!--the icon from boostrap-->
-                </a>
-                </a>
-              </div>
-              
-            </div>
-      
-          </div>
-      
-          <hr class="bg-white">
-      
-          <div class="text-center">
-            <p class="mb-0">Copyright &copy; 2025 Alilee Transformed Limited. All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <!-- scroll to top icon-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+      </a>
       
       <!-- Bootstrap JS Bundle (required for responsive navbar) -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <script src="/js/form.js"></script>
+
+      <!-- floating whatsapp icon-->
+      <!-- my floating whatsapp icon-->
+    <a href="https://wa.me/+254785687846" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script>
+    // this goes to all html pages to load navbar dynamically
+    fetch('/partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Re-initialize Bootstrap components if needed
+        new bootstrap.Collapse(document.getElementById('navbarNav'));
+      });
+
+      // this goes to all html pages to load footer dynamically
+      fetch('/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+   </script>
+
+
+   <!-- scroll-up button HTML  -->
+<a href="#" id="scroll-up" class="scrollup" aria-label="Scroll to top">
+  <i class="bi bi-arrow-up scrollup__icon"></i>
+</a>
 </body>
 </html>
