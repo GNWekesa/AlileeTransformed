@@ -1,7 +1,7 @@
 # AlileeTransformed
 For the company-Alilee Transformed Limited
 
-Deployed on Netlify at https://delicate-choux-e32692.netlify.app/
+Deployed on Netlify at https://jovial-macaron-cb9ead.netlify.app/
 / (root)
 │
 ├── index.html                  # Main landing page
