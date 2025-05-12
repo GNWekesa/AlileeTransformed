@@ -1,50 +1,29 @@
 <!-- partials/navbar.html -->
-<!--Key Benefits:
-No code duplication: The navbar is loaded once from navbar.html.-->
-      <!-- i am removing all text-white classes in the HTML to use the !important css style-->
-      <!-- in below line it does not have  explicit z-index, so it gets a default stacking level which may place it below the overlay. -->  
-      <!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: transparent;">-->
-        <!-- in below, I have given it z-index: 2; and position: relative;  to lift it above the overlay.-->
-        <!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: transparent; z-index: 2; position: relative;">-->
-
-              <!-- initial line since it was one page website-->
-              <!-- below is the new working link to another page but am commenting because, see next comment-->
-              <!--<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>-->
-              <!--<li class="nav-item"><a class="nav-link" href="#about">About</a></li>-->
-              <!--<li class="nav-item"><a class="nav-link text-white" href="#shop">Shop</a></li>-->
-              <!--<li class="nav-item"><a class="nav-link" href="/shop.html">Shop</a></li>-->
-              <!--<li class="nav-item"><a class="nav-link" href="/categories.html">Categories</a></li>-->
-              <!--<li class="nav-item"><a class="nav-link" href="/new-arrivals.html">New Arrivals</a></li>-->
-              <!--<li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>-->
-              <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
-              <!--To link sections across different pages (e.g., from shop.html to index.html#contact) while 
-              maintaining a consistent navbar-->
- 
-
-
-<!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: transparent; z-index: 1000; position: relative;">-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #b4869f; z-index: 1000; position: relative;">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
-      <img src="/images/AlileeOfficialLogoTagline.png" alt="Logo" style="height: 30px; margin-right: 10px;" />
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+        <!-- Logo here -->
+    <a class="navbar-brand" href="/">
+      <img src="/images/AlileelogoNoBg.png" alt="Alilee Fashion Logo" height="40">
+    </a>
+        <!-- Brand Name (Logo) -->
+    <a class="navbar-brand fw-bold" href="/" style="color: #001C6C !important;">
       Alilee Fashion
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/shop">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="/collections">Collections</a></li>
-        <li class="nav-item"><a class="nav-link" href="/new-arrivals">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="/views/shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="/views/collections.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="/views/new-arrivals.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
-        <!-- the above is as it is since it redirects to reviews that are on homepage-->
-        <li class="nav-item"><a class="nav-link" href="/contactp">Contact</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="/cart-checkout">Cart and Checkout</a></li>
-      </ul>            
+        <li class="nav-item"><a class="nav-link" href="/views/contactp.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/views/cart-checkout.html">Cart and Checkout</a></li>
+      </ul>
     </div>
   </div>
 </nav>
