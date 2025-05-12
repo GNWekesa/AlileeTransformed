@@ -2,21 +2,26 @@
   "name": "alileetransformed",
   "version": "1.0.0",
   "description": "For the company-Alilee Transformed Limited",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "xcopy /s /e src public"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GNWekesa/AlileeTransformed.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.3",
-    "bootstrap": "^5.3.5",
-    "express": "^4.21.2",
-    "nodemailer": "^6.10.1"
+  "bugs": {
+    "url": "https://github.com/GNWekesa/AlileeTransformed/issues"
   },
-  "engines": {
-    "node": "18.x"
+  "homepage": "https://github.com/GNWekesa/AlileeTransformed#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "nodemailer": "^7.0.3",
+    "serverless-http": "^3.2.0"
   }
 }
+
