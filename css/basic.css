@@ -1,13 +1,9 @@
+/**********end of nav bar style**********/
 /* Ensure navbar stays on top */
 .navbar {
   z-index: 1000; /* Higher than hero overlay's z-index (0) */
   position: relative; /* Required for z-index to work */
 }
-
-/* enable smooth scrolling via CSS:*/
-html {
-    scroll-behavior: smooth;
-  }
 
 /* Scrolled state */
 .navbar-scrolled {
@@ -25,6 +21,8 @@ html {
 .navbar-dark .navbar-brand {
   color: #001C6C !important;
 }
+/**********end of nav bar style**********/
+
 
 
 /* style for the floating whatsapp icon */
@@ -55,7 +53,8 @@ html {
 /* force entire page to be this bg color*/
 /* Force full page background */
 body, html {
-  background-color: #f9f5e3 !important;
+  background-color: #f8f8ff !important;
+  scroll-behavior: smooth; /* to enable smooth scrolling via CSS:*/
   font-family: Garamond, serif; /* am forcing my whole page to have this font*/
   margin: 0;
   padding: 0;
