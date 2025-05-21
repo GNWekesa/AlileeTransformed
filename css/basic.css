@@ -23,6 +23,17 @@
 }
 /**********end of nav bar style**********/
 
+/*style for sections to prevent them from overlapping*/
+section {
+  padding: 2rem 0; /* Top and bottom padding */
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 3rem 0; /* More space on small screens */
+  }
+}
+
 
 
 /* style for the floating whatsapp icon */
